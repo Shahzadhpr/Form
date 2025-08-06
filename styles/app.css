@@ -79,9 +79,9 @@ table {
 */
 
 :root {
-	--text-color: #1D2939;
-	--primery-color: #05A6A6;
-	--secondery-color: #F5F5F5;
+	--primery-color: #1D2939;
+	--secondery-color: #A7A7A7;
+	--border-color: #E5E5E5;
 }
 
 html {
@@ -98,5 +98,64 @@ html {
 body {
     font-family: "YekanBakh Medium", sans-serif;
 	font-size: 1.6rem;
-	color: var(--text-color);
+	color: var(--primery-color);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.form-container {
+
+}
+
+.form-container__tiltle {
+	font-family: "YekanBakh Heavy";
+	font-size: 3.2rem;
+}
+
+.form-container__coption {
+	font-size: 1.8rem;
+	color: rgba(29, 41, 57, .5);
+}
+
+.form {
+
+}
+
+.form__input-wrapper {
+
+}
+
+.form__lbl {
+
+}
+
+.form__input {
+
+}
+
+.form__submit {
+
+}
+
+.form-container__lins {
+
+}
+
+.form-links {
+
+}
+
+.form-links__item {
+
+}
+
+.form-links__text {
+
+}
+
+.form-links__img {
+
 }
