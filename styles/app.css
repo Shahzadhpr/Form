@@ -23,6 +23,11 @@
     src: url(../fonts/YekanBakh-Regular.woff) format("woff2");
 }
 
+@font-face {
+    font-family: "Lato-Regular";
+    src: url(../fonts/Lato-Regular.ttf) format("woff2");
+}
+
 /*
 =============
   Reest Css
@@ -98,6 +103,7 @@ html {
 body {
     font-family: "YekanBakh Medium", sans-serif;
 	font-size: 1.6rem;
+	background-color: #E5E9EC;
 	color: var(--primery-color);
 }
 
@@ -107,21 +113,30 @@ a {
 }
 
 .form-container {
-
+	width: 59.4rem;
+	height: 71.7rem;
+	background-color: #FFFFFF;
+	border-radius: 1.6rem;
+	margin: 10rem auto;
+	padding: 3rem 6rem 3.4rem;
 }
 
 .form-container__tiltle {
 	font-family: "YekanBakh Heavy";
 	font-size: 3.2rem;
+	text-align: center;
 }
 
 .form-container__coption {
 	font-size: 1.8rem;
 	color: rgba(29, 41, 57, .5);
+	margin: 1.6rem 0 7.5rem 0;
+	text-align: center;
 }
 
 .form {
-
+	margin: 3.2rem 0;
+	text-align: right;
 }
 
 .form__input-wrapper {
@@ -145,17 +160,30 @@ a {
 }
 
 .form-links {
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1.4rem;
 }
 
 .form-links__item {
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	column-gap: .8rem;
+	background-color: #FFFFFF;
+	border: 1px solid var(--border-color);
+	border-radius: .4rem;
+	padding: 1.4rem 7.4rem;
+	height: 5.2rem;
 }
 
 .form-links__text {
-
+	font-family: "Lato-Regular";
 }
 
 .form-links__img {
-
+	width: 2.4rem;
+	height: 2.4rem;
 }
