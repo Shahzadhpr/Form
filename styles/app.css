@@ -5,7 +5,7 @@
 */
 @font-face {
     font-family: "YekanBakh Bold";
-    src: url(../fonts/YekanBakh-Bold.woff2) format("woff2");
+    src: url(../fonts/YekanBakh-Bold.woff) format("woff2");
 }
 
 @font-face {
@@ -77,6 +77,12 @@ table {
 	border-spacing: 0;
 }
 
+input, button {
+	font: inherit;
+	border: none;
+	outline: none;
+}
+
 /*
 =============
   Styles Css
@@ -107,17 +113,21 @@ body {
 	color: var(--primery-color);
 }
 
+body::selection {
+	background-color: var(--border-color);
+	color: var(--primery-color);
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
 }
 
 .form-container {
-	/* width: 59.4rem; */
-	height: 71.7rem;
+	max-width: 59.4rem;
 	background-color: #FFFFFF;
 	border-radius: 1.6rem;
-	margin: 10rem auto;
+	margin: 5rem auto;
 	padding: 3rem 6rem 3.4rem;
 }
 
@@ -137,25 +147,53 @@ a {
 .form {
 	margin: 3.2rem 0;
 	text-align: right;
-}
-
-.form__input-wrapper {
-
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.4rem;
 }
 
 .form__lbl {
+	font-family: "YekanBakh Bold";
+	font-size: 1.4rem;
+	font-size: 1.2rem;
+}
 
+.form__lbl::after {
+	content: "*";
+	color: #c918a4;
 }
 
 .form__input {
+	display: block;
+	width: 100%;
+	height: 5.5rem;
+	padding: 0 1.6rem;
+	margin-top: 1.6rem;
+	border: 1px solid var(--border-color);
+	border-radius: .4rem;
+	font-size: 1.4rem;
+	font-family: "YekanBakh Regular";
+	background-color: #FFFFFF;
+	color: var(--primery-color);
+}
 
+.form__input::placeholder {
+	color: var(--secondery-color);
+}
+
+.form__input:focus {
+	border-color: var(--primery-color);
 }
 
 .form__submit {
-
+	border-radius: .4rem;
+	background-color: var(--primery-color);
+	color: #FFFFFF;
+	padding: 1.4rem;
+	cursor: pointer;
 }
 
-.form-container__lins {
+.form-container__lines {
 	font-size: 1.8rem;
 	color: var(--secondery-color);
 	margin: 2.3rem 0 2.5rem 0;
@@ -163,14 +201,14 @@ a {
 	align-items: center;
 }
 
-.form-container__lins-text {
+.form-container__lines-text {
 	width: 8.4rem;
 	flex-shrink: 0;
 	text-align: center;
 	margin: 0 2rem;
 }
 
-.form-container__lin {
+.form-container__line {
 	width: 17.5rem;
 	height: .1rem;
 	background-color: var(--border-color);
@@ -192,7 +230,7 @@ a {
 	background-color: #FFFFFF;
 	border: 1px solid var(--border-color);
 	border-radius: .4rem;
-	padding: 1.4rem 7.4rem;
+	padding: 1.4rem 6.4rem;
 	height: 5.2rem;
 }
 
@@ -221,19 +259,24 @@ a {
 
 	.form-container__coption {
 		font-size: 1.6rem;
+		margin-bottom: 4.5rem;
 	}
 
 	.form-container__lins-text{
 		margin: 0 1.6rem;
 	}
-	
+
 	.form-links{
 		flex-wrap: wrap;
 		row-gap: 1.6rem;
 	}
-	
+
 	.form-links__item{
 		flex: auto;
 		width: 100%;
+	}
+
+	.form__submit {
+		cursor: default;
 	}
 }
